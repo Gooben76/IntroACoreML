@@ -24,13 +24,13 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
                         if capturePhotoOutput != nil {
                             if captureSession!.canAddOutput(capturePhotoOutput!) {
                                 captureSession!.addOutput(capturePhotoOutput!)
-                                captureVideoPreviewLayer = AVCaptureVideoPreviewLayer()
+                                captureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
                                 captureVideoPreviewLayer?.videoGravity = .resizeAspectFill
                                 captureVideoPreviewLayer?.connection?.videoOrientation = .portrait
                                 if captureVideoPreviewLayer != nil {
                                     captureVideoPreviewLayer!.frame = cameraVue.bounds
                                     cameraVue.layer.addSublayer(captureVideoPreviewLayer!)
-                                    cameraVue.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector("prendrePhoto")))
+                                    cameraVue.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(prendrePhoto)))
                                     captureSession!.startRunning()
                                 }
                             }

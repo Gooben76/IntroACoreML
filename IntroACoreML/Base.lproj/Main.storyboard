@@ -75,21 +75,29 @@
                                     <constraint firstAttribute="bottom" secondItem="HbR-df-hu8" secondAttribute="bottom" constant="8" id="zpK-fy-L3X"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk5-j0-uB5">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk5-j0-uB5">
                                 <rect key="frame" x="8" y="464" width="45" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="Y0N-NE-dzu"/>
                                     <constraint firstAttribute="height" constant="45" id="nYI-qh-SsH"/>
                                 </constraints>
                                 <state key="normal" image="Changer_camera"/>
+                                <connections>
+                                    <action selector="rotationAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lmy-HK-20D"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5a3-Mk-fMN">
-                                <rect key="frame" x="338" y="464" width="45" height="45"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5a3-Mk-fMN">
+                                <rect key="frame" x="328" y="464" width="45" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="74d-7V-PMY"/>
                                     <constraint firstAttribute="height" constant="45" id="FW3-u4-A6V"/>
                                 </constraints>
                                 <state key="normal" image="librairy"/>
+                                <connections>
+                                    <action selector="libraryAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sq9-rt-DZC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -101,7 +109,7 @@
                             <constraint firstItem="Jph-DU-NNu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JGh-CI-Qcg"/>
                             <constraint firstItem="VMe-50-HQv" firstAttribute="top" secondItem="5a3-Mk-fMN" secondAttribute="bottom" constant="8" id="T8b-c8-ww8"/>
                             <constraint firstItem="Jph-DU-NNu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tdi-Ck-c0K"/>
-                            <constraint firstItem="5a3-Mk-fMN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="8" id="Tx6-Hc-WW6"/>
+                            <constraint firstItem="5a3-Mk-fMN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-2" id="Tx6-Hc-WW6"/>
                             <constraint firstItem="Jph-DU-NNu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nEM-Ie-udz"/>
                             <constraint firstItem="Qk5-j0-uB5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="o91-LE-BNb"/>
                             <constraint firstItem="VMe-50-HQv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rjB-mJ-5LO"/>
@@ -110,8 +118,10 @@
                     </view>
                     <connections>
                         <outlet property="cameraVue" destination="Jph-DU-NNu" id="ZRT-wi-mbN"/>
+                        <outlet property="libraryButton" destination="5a3-Mk-fMN" id="gpR-j8-LxH"/>
                         <outlet property="photoChoisieImageView" destination="ejR-7W-hrU" id="HeR-cl-sjF"/>
                         <outlet property="predictionLabel" destination="HbR-df-hu8" id="MkP-c7-DdD"/>
+                        <outlet property="rotationButton" destination="Qk5-j0-uB5" id="ZH3-Rs-pWy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
